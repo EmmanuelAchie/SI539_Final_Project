@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Canada</title>
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+  <header>
+  <div class="navbar">
+    <a href="../index.html">Home</a>
+    <a href="../europe.html">Europe</a>
+    <a href="../asia.html">Asia</a>
+    <a href="../africa.html">Africa</a>
+    <a href="../americas.html" class="active">Americas</a>
+    <a href="../oceania.html">Oceania</a>
+  </div>
+  </header>
+
+  <main>
+
+<h1 class="country-title">Canada 🇨🇦</h1>
+
+<div class="country-container">
+
+  <a href="../americas.html">← Back to Americas</a>
+
+  <p>Canada is a vast and diverse country known for its stunning natural landscapes, multicultural cities, and friendly people. From the majestic Rocky Mountains to the vibrant city of Toronto, Canada offers a unique blend of outdoor adventure and urban culture.</p>
+
+  <h2>Top Attractions</h2>
+  <ul>
+    <li>Niagara Falls</li>
+    <li>Banff National Park</li>
+    <li>CN Tower in Toronto</li>
+    <li>Old Quebec City</li>
+    <li>Vancouver's Stanley Park</li>
+    <li>Montreal's Old Port</li>
+  </ul>
+
+  <h2>Interesting Facts</h2>
+  <ul>
+    <li>Capital: Ottawa</li>
+    <li>Population: ~40 million</li>
+    <li>Second largest country in the world by land area</li>
+    <li>Home to the longest coastline in the world</li>
+    <li>Official languages: English and French</li>
+    <li>Known for maple syrup and hockey</li>
+  </ul>
+
+  <div class="slider">
+    <button class="prev">&#10094;</button>
+    <img src="../images/canada/canada2.jpg" class="slide active" alt="Canada Landscape">
+    <img src="../images/canada/canada3.jpg" class="slide" alt="Canada Culture">
+    <img src="../images/canada/canada4.jpg" class="slide" alt="Canada Nature">
+    <button class="next">&#10095;</button>
+  </div>
+
+</div>
+
+  </main>
+
+  <footer>
+    <p>&copy; Around the World in 41 Screens. All rights reserved. | <span id="year"></span></p>
+    <!-- <div class="footer-container"></div> -->
+  </footer>
+
+  <script src="../js/footer.js"></script>
+
+<script>
+  const slides = document.querySelectorAll(".slide");
+  let index = 0;
+
+  document.querySelector(".next").onclick = () => {
+    slides[index].classList.remove("active");
+    index = (index + 1) % slides.length;
+    slides[index].classList.add("active");
+  };
+
+  document.querySelector(".prev").onclick = () => {
+    slides[index].classList.remove("active");
+    index = (index - 1 + slides.length) % slides.length;
+    slides[index].classList.add("active");
+  };
+</script>
+
+</body>
+</html>

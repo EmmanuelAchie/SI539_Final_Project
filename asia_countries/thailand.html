@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Thailand</title>
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+  <header>
+  <div class="navbar">
+    <a href="../index.html">Home</a>
+    <a href="../europe.html">Europe</a>
+    <a href="../asia.html" class="active">Asia</a>
+    <a href="../africa.html">Africa</a>
+    <a href="../americas.html">Americas</a>
+    <a href="../oceania.html">Oceania</a>
+  </div>
+  </header>
+
+  <main>
+
+<h1 class="country-title">Thailand 🇹🇭</h1>
+
+<div class="country-container">
+
+  <a href="../asia.html">← Back to Asia</a>
+
+  <p>Thailand is famous for its stunning beaches, vibrant culture, and delicious cuisine. From bustling Bangkok to serene islands, it offers a unique blend of tradition and modernity.</p>
+
+  <h2>Top Attractions</h2>
+  <ul>
+    <li>Phuket</li>
+    <li>Bangkok</li>
+    <li>Chiang Mai</li>
+    <li>Ayutthaya</li>
+    <li>Phi Phi Islands</li>
+  </ul>
+
+  <h2>Interesting Facts</h2>
+  <ul>
+    <li>Capital: Bangkok</li>
+    <li>Population: ~71 million</li>
+    <li>Known as the "Land of Smiles"</li>
+    <li>Home to over 40,000 Buddhist temples</li>
+    <li>Thai cuisine is renowned worldwide, with dishes like Pad Thai and Tom Yum Goong</li>
+  </ul>
+
+  <div class="slider">
+    <button class="prev">&#10094;</button>
+    <img src="../images/thailand/thailand2.jpg" class="slide active" alt="Phuket">
+    <img src="../images/thailand/thailand3.jpg" class="slide" alt="Bangkok">
+    <img src="../images/thailand/thailand4.jpg" class="slide" alt="Chiang Mai">
+    <button class="next">&#10095;</button>
+  </div>
+
+</div>
+
+  </main>
+
+  <footer>
+    <p>&copy; Around the World in 41 Screens. All rights reserved. | <span id="year"></span></p>
+    <!-- <div class="footer-container"></div> -->
+  </footer>
+
+  <script src="../js/footer.js"></script>
+
+<script>
+  const slides = document.querySelectorAll(".slide");
+  let index = 0;
+
+  document.querySelector(".next").onclick = () => {
+    slides[index].classList.remove("active");
+    index = (index + 1) % slides.length;
+    slides[index].classList.add("active");
+  };
+
+  document.querySelector(".prev").onclick = () => {
+    slides[index].classList.remove("active");
+    index = (index - 1 + slides.length) % slides.length;
+    slides[index].classList.add("active");
+  };
+</script>
+
+</body>
+</html>

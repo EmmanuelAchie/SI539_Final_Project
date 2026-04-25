@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Peru</title>
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+  <header>
+  <div class="navbar">
+    <a href="../index.html">Home</a>
+    <a href="../europe.html">Europe</a>
+    <a href="../asia.html">Asia</a>
+    <a href="../africa.html">Africa</a>
+    <a href="../americas.html" class="active">Americas</a>
+    <a href="../oceania.html">Oceania</a>
+  </div>
+  </header>
+
+  <main>
+
+<h1 class="country-title">Peru 🇵🇪</h1>
+
+<div class="country-container">
+
+  <a href="../americas.html">← Back to Americas</a>
+
+  <p>Peru is a land of ancient wonders and vibrant culture. From the majestic Machu Picchu to the bustling city of Lima, it offers a blend of history, nature, and modern life.</p>
+
+  <h2>Top Attractions</h2>
+  <ul>
+    <li>Machu Picchu</li>
+    <li>Lima's Historic Center</li>
+    <li>Lake Titicaca</li>
+    <li>Colca Canyon</li>
+    <li>Nazca Lines</li>
+  </ul>
+
+  <h2>Interesting Facts</h2>
+  <ul>
+    <li>Capital: Lima</li>
+    <li>Population: ~34 million</li>
+    <li>Home to the Nazca Lines</li>
+    <li>Birthplace of the potato</li>
+    <li>Known for its vibrant festivals like Inti Raymi</li>
+  </ul>
+
+  <div class="slider">
+    <button class="prev">&#10094;</button>
+    <img src="../images/peru/peru2.jpg" class="slide active" alt="Peru Landscape">
+    <img src="../images/peru/peru3.jpg" class="slide" alt="Peru Culture">
+    <img src="../images/peru/peru4.jpg" class="slide" alt="Peru Nature">
+    <button class="next">&#10095;</button>
+  </div>
+
+</div>
+
+</main>
+
+<footer>
+  <p>&copy; Around the World in 41 Screens. All rights reserved. | <span id="year"></span></p>
+  <!-- <div class="footer-container"></div> -->
+</footer>
+
+<script src="../js/footer.js"></script>
+
+<script>
+  const slides = document.querySelectorAll(".slide");
+  let index = 0;
+
+  document.querySelector(".next").onclick = () => {
+    slides[index].classList.remove("active");
+    index = (index + 1) % slides.length;
+    slides[index].classList.add("active");
+  };
+
+  document.querySelector(".prev").onclick = () => {
+    slides[index].classList.remove("active");
+    index = (index - 1 + slides.length) % slides.length;
+    slides[index].classList.add("active");
+  };
+</script>
+
+</body>
+</html>

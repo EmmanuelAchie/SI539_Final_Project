@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>India</title>
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+  <header>
+  <div class="navbar">
+    <a href="../index.html">Home</a>
+    <a href="../europe.html">Europe</a>
+    <a href="../asia.html" class="active">Asia</a>
+    <a href="../africa.html">Africa</a>
+    <a href="../americas.html">Americas</a>
+    <a href="../oceania.html">Oceania</a>
+  </div>
+  </header>
+
+  <main>
+
+<h1 class="country-title">India 🇮🇳</h1>
+
+<div class="country-container">
+
+  <a href="../asia.html">← Back to Asia</a>
+
+  <p>India is a land of incredible diversity, from the bustling cities to the serene countryside. It offers a rich tapestry of culture, history, and natural beauty.</p>
+
+  <h2>Top Attractions</h2>
+  <ul>
+    <li>Taj Mahal</li>
+    <li>Jaipur</li>
+    <li>Kerala Backwaters</li>
+    <li>Varanasi</li>
+    <li>Goa Beaches</li>
+  </ul>
+
+  <h2>Interesting Facts</h2>
+  <ul>
+    <li>Capital: New Delhi</li>
+    <li>Population: ~1.4 billion</li>
+    <li>Home to the world's largest democracy</li>
+    <li>Second most populous country in the world</li>
+    <li>Home to over 2,000 distinct languages</li>
+  </ul>
+
+  <div class="slider">
+    <button class="prev">&#10094;</button>
+    <img src="../images/india/india2.jpg" class="slide active" alt="Taj Mahal">
+    <img src="../images/india/india3.jpg" class="slide" alt="Jaipur">
+    <img src="../images/india/india4.jpg" class="slide" alt="Kerala Backwaters">
+    <button class="next">&#10095;</button>
+  </div>
+
+</div>
+
+  </main>
+
+  <footer>
+    <p>&copy; Around the World in 41 Screens. All rights reserved. | <span id="year"></span></p>
+    <!-- <div class="footer-container"></div> -->
+  </footer>
+
+  <script src="../js/footer.js"></script>
+
+<script>
+  const slides = document.querySelectorAll(".slide");
+  let index = 0;
+
+  document.querySelector(".next").onclick = () => {
+    slides[index].classList.remove("active");
+    index = (index + 1) % slides.length;
+    slides[index].classList.add("active");
+  };
+
+  document.querySelector(".prev").onclick = () => {
+    slides[index].classList.remove("active");
+    index = (index - 1 + slides.length) % slides.length;
+    slides[index].classList.add("active");
+  };
+</script>
+
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dominican Republic</title>
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+  <header>
+  <div class="navbar">
+    <a href="../index.html">Home</a>
+    <a href="../europe.html">Europe</a>
+    <a href="../asia.html">Asia</a>
+    <a href="../africa.html">Africa</a>
+    <a href="../americas.html" class="active">Americas</a>
+    <a href="../oceania.html">Oceania</a>
+  </div>
+  </header>
+
+  <main>
+
+<h1 class="country-title">Dominican Republic 🇩🇴</h1>
+
+<div class="country-container">
+
+  <a href="../americas.html">← Back to Americas</a>
+
+  <p>The Dominican Republic is a Caribbean paradise known for its stunning beaches, vibrant culture, and rich history. From the colonial charm of Santo Domingo to the natural beauty of Punta Cana, it offers a perfect blend of relaxation and adventure.</p>
+
+  <h2>Top Attractions</h2>
+  <ul>
+    <li>Punta Cana Beaches</li>
+    <li>Santo Domingo's Colonial Zone</li>
+    <li>Los Haitises National Park</li>
+    <li>Saona Island</li>
+    <li>Jarabacoa Mountains</li>
+  </ul>
+
+  <h2>Interesting Facts</h2>
+  <ul>
+    <li>Capital: Santo Domingo</li>
+    <li>Population: ~11 million</li>
+    <li>Birthplace of merengue music</li>
+    <li>Shares the island of Hispaniola with Haiti</li>
+    <li>Known for its vibrant festivals and warm hospitality</li>
+  </ul>
+
+  <div class="slider">
+    <button class="prev">&#10094;</button>
+    <img src="../images/dominicanr/dominicanr2.jpg" class="slide active" alt="Dominican Republic Landscape">
+    <img src="../images/dominicanr/dominicanr3.jpg" class="slide" alt="Dominican Republic Culture">
+    <img src="../images/dominicanr/dominicanr4.jpg" class="slide" alt="Dominican Republic Nature">
+    <button class="next">&#10095;</button>
+  </div>
+
+</div>
+
+  </main>
+
+  <footer>
+    <p>&copy; Around the World in 41 Screens. All rights reserved. | <span id="year"></span></p>
+    <!-- <div class="footer-container"></div> -->
+  </footer>
+
+  <script src="../js/footer.js"></script>
+
+<script>
+  const slides = document.querySelectorAll(".slide");
+  let index = 0;
+
+  document.querySelector(".next").onclick = () => {
+    slides[index].classList.remove("active");
+    index = (index + 1) % slides.length;
+    slides[index].classList.add("active");
+  };
+
+  document.querySelector(".prev").onclick = () => {
+    slides[index].classList.remove("active");
+    index = (index - 1 + slides.length) % slides.length;
+    slides[index].classList.add("active");
+  };
+</script>
+
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Germany</title>
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+  <header>
+  <div class="navbar">
+    <a href="../index.html">Home</a>
+    <a href="../europe.html" class="active">Europe</a>
+    <a href="../asia.html">Asia</a>
+    <a href="../africa.html">Africa</a>
+    <a href="../americas.html">Americas</a>
+    <a href="../oceania.html">Oceania</a>
+  </div>
+  </header>
+
+  <main>
+
+<h1 class="country-title">Germany 🇩🇪</h1>
+<div class="country-container">
+
+      <a href="../europe.html">← Back to Europe</a>
+
+<p>Germany is known for its engineering, historic cities, and cultural traditions.</p>
+
+    <h2>Top Attractions</h2>
+    <ul>
+     <li>Brandenburg Gate</li>
+     <li>Neuschwanstein Castle</li>
+     <li>Berlin Wall</li>
+     <li>Cologne Cathedral</li>
+    </ul>
+
+    <h2>Interesting Facts</h2>
+    <ul>
+     <li>Capital: Berlin</li>
+     <li>Population: ~84 million</li>
+     <li>Famous for beer and sausages</li>
+     <li>Famous for Oktoberfest</li>
+     <li>One of Europe's largest economies</li>
+    </ul>
+
+    <div class="slider">
+      <button class="prev">&#10094;</button>
+     <img src="../images/germany/germany2.jpg" class="slide active" alt="Germany">
+     <img src="../images/germany/germany3.jpg" class="slide" alt="Germany">
+      <img src="../images/germany/germany4.jpg" class="slide" alt="Germany">
+      <button class="next">&#10095;</button>
+    </div>
+</div>
+
+  </main>
+
+  <footer>
+    <p>&copy; Around the World in 41 Screens. All rights reserved. | <span id="year"></span></p>
+    <!-- <div class="footer-container"></div> -->
+  </footer>
+
+  <script src="../js/footer.js"></script>
+
+<script>
+  const slides = document.querySelectorAll(".slide");
+  let index = 0;
+
+  document.querySelector(".next").onclick = () => {
+    slides[index].classList.remove("active");
+    index = (index + 1) % slides.length;
+    slides[index].classList.add("active");
+  };
+
+  document.querySelector(".prev").onclick = () => {
+    slides[index].classList.remove("active");
+    index = (index - 1 + slides.length) % slides.length;
+    slides[index].classList.add("active");
+  };
+</script>
+
+</body>
+</html>
