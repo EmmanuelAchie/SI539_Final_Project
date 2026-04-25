@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>South Africa</title>
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+  <header>
+  <div class="navbar">
+    <a href="../index.html">Home</a>
+    <a href="../europe.html">Europe</a>
+    <a href="../asia.html">Asia</a>
+    <a href="../africa.html" class="active">Africa</a>
+    <a href="../americas.html">Americas</a>
+    <a href="../oceania.html">Oceania</a>
+  </div>
+  </header>
+
+  <main>
+
+<h1 class="country-title">South Africa 🇿🇦</h1>
+
+<div class="country-container">
+
+  <a href="../africa.html">← Back to Africa</a>
+
+  <p>South Africa is a vibrant country known for its diverse culture, stunning landscapes, and rich history. From the bustling cities to the breathtaking safaris, it offers a unique blend of experiences.</p>
+
+  <h2>Top Attractions</h2>
+  <ul>
+    <li>Table Mountain</li>
+    <li>Kruger National Park</li>
+    <li>Robben Island</li>
+    <li>Garden Route</li>
+    <li>Cape Winelands</li>
+  </ul>
+
+  <h2>Interesting Facts</h2>
+  <ul>
+    <li>Capital: Pretoria (administrative), Cape Town (legislative), Bloemfontein (judicial)</li>
+    <li>Population: ~60 million</li>
+    <li>Known as the "Rainbow Nation" for its cultural diversity</li>
+    <li>Home to the world's largest diamond mine</li>
+    <li>Has 11 official languages</li>
+  </ul>
+
+  <div class="slider">
+    <button class="prev">&#10094;</button>
+    <img src="../images/south_africa/southafrica2.jpg" class="slide active" alt="South Africa Landscape">
+    <img src="../images/south_africa/southafrica3.jpg" class="slide" alt="South Africa Culture">
+    <img src="../images/south_africa/southafrica4.jpg" class="slide" alt="South Africa Wildlife">
+
+    <button class="next">&#10095;</button>
+
+  </div>
+
+</div>
+
+  </main>
+
+  <footer>
+    <p>&copy; Around the World in 41 Screens. All rights reserved. | <span id="year"></span></p>
+    <!-- <div class="footer-container"></div> -->
+  </footer>
+
+  <script src="../js/footer.js"></script>
+
+<script>
+  const slides = document.querySelectorAll(".slide");
+  let index = 0;
+
+  document.querySelector(".next").onclick = () => {
+    slides[index].classList.remove("active");
+    index = (index + 1) % slides.length;
+    slides[index].classList.add("active");
+  };
+
+  document.querySelector(".prev").onclick = () => {
+    slides[index].classList.remove("active");
+    index = (index - 1 + slides.length) % slides.length;
+    slides[index].classList.add("active");
+  };
+</script>
+
+</body>
+</html>

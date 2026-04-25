@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Egypt</title>
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+  <header>
+  <div class="navbar">
+    <a href="../index.html">Home</a>
+    <a href="../europe.html">Europe</a>
+    <a href="../asia.html">Asia</a>
+    <a href="../africa.html" class="active">Africa</a>
+    <a href="../americas.html">Americas</a>
+    <a href="../oceania.html">Oceania</a>
+  </div>
+  </header>
+
+  <main>
+
+<h1 class="country-title">Egypt 🇪🇬</h1>
+
+<div class="country-container">
+
+  <a href="../africa.html">← Back to Africa</a>
+
+  <p>Egypt is a land of ancient wonders, vibrant culture, and timeless beauty. From the iconic pyramids to the bustling streets of Cairo, it offers a unique blend of history and modernity.</p>
+
+  <h2>Top Attractions</h2>
+  <ul>
+    <li>Pyramids of Giza</li>
+    <li>Luxor Temple</li>
+    <li>Red Sea Beaches</li>
+    <li>Valley of the Kings</li>
+    <li>Abu Simbel Temples</li>
+  </ul>
+
+  <h2>Interesting Facts</h2>
+  <ul>
+    <li>Capital: Cairo</li>
+    <li>Population: ~110 million</li>
+    <li>Home to one of the Seven Wonders of the Ancient World</li>
+    <li>The Nile River is the longest river in the world</li>
+    <li>Egyptian cuisine is famous for dishes like Koshari and Ful Medames</li>
+  </ul>
+
+  <div class="slider">
+    <button class="prev">&#10094;</button>
+    <img src="../images/egypt/egypt2.jpg" class="slide active" alt="Egypt Landscape">
+    <img src="../images/egypt/egypt3.jpg" class="slide" alt="Egypt Culture">
+    <img src="../images/egypt/egypt4.jpg" class="slide" alt="Egypt History">
+    <button class="next">&#10095;</button>
+  </div>
+
+</div>
+
+  </main>
+
+  <footer>
+    <p>&copy; Around the World in 41 Screens. All rights reserved. | <span id="year"></span></p>
+    <!-- <div class="footer-container"></div> -->
+  </footer>
+
+  <script src="../js/footer.js"></script>
+
+<script>
+  const slides = document.querySelectorAll(".slide");
+  let index = 0;
+
+  document.querySelector(".next").onclick = () => {
+    slides[index].classList.remove("active");
+    index = (index + 1) % slides.length;
+    slides[index].classList.add("active");
+  };
+
+  document.querySelector(".prev").onclick = () => {
+    slides[index].classList.remove("active");
+    index = (index - 1 + slides.length) % slides.length;
+    slides[index].classList.add("active");
+  };
+</script>
+
+</body>
+</html>

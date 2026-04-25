@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Australia</title>
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+  <header>
+  <div class="navbar">
+    <a href="../index.html">Home</a>
+    <a href="../europe.html">Europe</a>
+    <a href="../asia.html">Asia</a>
+    <a href="../africa.html">Africa</a>
+    <a href="../americas.html">Americas</a>
+    <a href="../oceania.html" class="active">Oceania</a>
+  </div>
+  </header>
+
+  <main>
+
+<h1 class="country-title">Australia 🇦🇺</h1>
+
+<div class="country-container">
+
+  <a href="../oceania.html">← Back to Oceania</a>
+
+  <p>Australia is known for its stunning landscapes, unique wildlife, and vibrant cities. From the Great Barrier Reef to Sydney's iconic Opera House, it offers a blend of natural beauty and modern culture.</p>
+
+  <h2>Top Attractions</h2>
+  <ul>
+    <li>Great Barrier Reef</li>
+    <li>Sydney Opera House</li>
+    <li>Uluru (Ayers Rock)</li>
+    <li>Bondi Beach</li>
+    <li>Blue Mountains</li>
+  </ul>
+
+  <h2>Interesting Facts</h2>
+  <ul>
+    <li>Capital: Canberra</li>
+    <li>Population: ~26 million</li>
+    <li>Home to the world's largest coral reef system</li>
+    <li>Has more kangaroos than people</li>
+  </ul>
+
+  <div class="slider">
+    <button class="prev">&#10094;</button>
+    <img src="../images/australia/australia2.jpg" class="slide active" alt="Great Barrier Reef">
+    <img src="../images/australia/australia3.jpg" class="slide" alt="Sydney Opera House">
+    <img src="../images/australia/australia4.jpg" class="slide" alt="Uluru">
+    <button class="next">&#10095;</button>
+  </div>
+
+</div>
+
+  </main>
+
+  <footer>
+    <p>&copy; Around the World in 41 Screens. All rights reserved. | <span id="year"></span></p>
+    <!-- <div class="footer-container"></div> -->
+  </footer>
+
+  <script src="../js/footer.js"></script>
+
+<script>
+  const slides = document.querySelectorAll(".slide");
+  let index = 0;
+
+  document.querySelector(".next").onclick = () => {
+    slides[index].classList.remove("active");
+    index = (index + 1) % slides.length;
+    slides[index].classList.add("active");
+  };
+
+  document.querySelector(".prev").onclick = () => {
+    slides[index].classList.remove("active");
+    index = (index - 1 + slides.length) % slides.length;
+    slides[index].classList.add("active");
+  };
+</script>
+
+</body>
+</html>

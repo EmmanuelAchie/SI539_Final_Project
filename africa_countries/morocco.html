@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Morocco</title>
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+  <header>
+  <div class="navbar">
+    <a href="../index.html">Home</a>
+    <a href="../europe.html">Europe</a>
+    <a href="../asia.html">Asia</a>
+    <a href="../africa.html" class="active">Africa</a>
+    <a href="../americas.html">Americas</a>
+    <a href="../oceania.html">Oceania</a>
+  </div>
+  </header>
+
+  <main>
+
+<h1 class="country-title">Morocco 🇲🇦</h1>
+
+<div class="country-container">
+
+  <a href="../africa.html">← Back to Africa</a>
+
+  <p>Morocco is a vibrant country known for its rich culture, stunning landscapes, and historic cities. From the bustling markets of Marrakech to the serene beaches of Essaouira, Morocco offers a unique blend of tradition and modernity.</p>
+
+  <h2>Top Attractions</h2>
+  <ul>
+    <li>Medina of Marrakech</li>
+    <li>Chefchaouen (Blue City)</li>
+    <li>Sahara Desert</li>
+    <li>Fes - Ancient medina</li>
+    <li>Atlas Mountains</li>
+  </ul>
+
+  <h2>Interesting Facts</h2>
+  <ul>
+    <li>Capital: Rabat</li>
+    <li>Population: ~37 million</li>
+    <li>Home to the oldest university in the world (University of Al Quaraouiyine)</li>
+    <li>Famous for its vibrant textiles and crafts</li>
+    <li>Moroccan cuisine is renowned for dishes like Tagine and Couscous</li>
+  </ul>
+
+  <div class="slider">
+    <button class="prev">&#10094;</button>
+    <img src="../images/morocco/morocco2.jpg" class="slide active" alt="Morocco Landscape">
+    <img src="../images/morocco/morocco3.jpg" class="slide" alt="Morocco Culture">
+    <img src="../images/morocco/morocco4.jpg" class="slide" alt="Morocco History">
+    <button class="next">&#10095;</button>
+  </div>
+
+</div>
+
+  </main>
+
+  <footer>
+    <p>&copy; Around the World in 41 Screens. All rights reserved. | <span id="year"></span></p>
+    <!-- <div class="footer-container"></div> -->
+  </footer>
+
+  <script src="../js/footer.js"></script>
+
+<script>
+  const slides = document.querySelectorAll(".slide");
+  let index = 0;
+
+  document.querySelector(".next").onclick = () => {
+    slides[index].classList.remove("active");
+    index = (index + 1) % slides.length;
+    slides[index].classList.add("active");
+  };
+
+  document.querySelector(".prev").onclick = () => {
+    slides[index].classList.remove("active");
+    index = (index - 1 + slides.length) % slides.length;
+    slides[index].classList.add("active");
+  };
+</script>
+
+</body>
+</html>
